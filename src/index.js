@@ -1,6 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store'
+import App from './App'
 
 const rootEl = document.querySelector('#root');
 
-ReactDOM.render(<div>Hello</div>, rootEl);
+render(<Provider store={store}><App /></Provider>, rootEl);
